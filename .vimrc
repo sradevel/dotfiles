@@ -8,6 +8,14 @@
 set nocompatible " Fuck VI... That's for grandpas.
 filetype off
 
+set clipboard=unnamed
+
+set nobackup
+set nowritebackup
+set noswapfile
+
+set backspace=2
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
@@ -30,3 +38,8 @@ set number
 set noerrorbells visualbell t_vb=
 set softtabstop=4
 "colorscheme solarized8_dark_high
+
+" highlight current Cursorline Number only
+set cursorline
+hi clear CursorLine
+hi CursorLineNr ctermbg=black
