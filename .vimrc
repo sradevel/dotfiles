@@ -84,4 +84,4 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
-source ~/.vim/coc.vim
+source ~/.vimfiles/coc.vim
