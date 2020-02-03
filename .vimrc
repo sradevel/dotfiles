@@ -22,6 +22,13 @@ syntax on                  " Enable syntax highlighting.
 " Key bindings
 let mapleader = ","        " Leader key is ,
 
+" insert new line without INSERT mode
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
+
+" Ctrl-l clears search
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
 filetype plugin indent on
 
 let g:pear_tree_repeatable_expand =0 "dont need the dot command"
