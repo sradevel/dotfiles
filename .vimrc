@@ -5,6 +5,7 @@
 " You want Vim, not vi. When Vim finds a vimrc, 'nocompatible' is set anyway.
 " We set it explicitely to make our position clear!
 set nocompatible
+set t_Co=256 "force 256 colors
 
 "filetype plugin indent on  " Load plugins according to detected filetype.
 filetype off
@@ -12,11 +13,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'neoclide/coc.nvim'
     Plugin 'tmsvg/pear-tree'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 syntax on                  " Enable syntax highlighting.
 
+" Key bindings
 let mapleader = ","        " Leader key is ,
+
 filetype plugin indent on
 
 let g:pear_tree_repeatable_expand =0 "dont need the dot command"
@@ -72,6 +77,8 @@ set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+" vim-airline config
+let g:airline_theme = 'wombat'
 "coc.nvim
 set cmdheight=2
 
