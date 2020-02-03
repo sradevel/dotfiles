@@ -15,6 +15,7 @@ call vundle#begin()
     Plugin 'tmsvg/pear-tree'
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
+    Plugin 'bling/vim-bufferline'
 call vundle#end()
 
 syntax on                  " Enable syntax highlighting.
@@ -85,7 +86,9 @@ set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
 " vim-airline config
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'minimalist'
+"let g:airline_powerline_fonts = 1
+"
 "coc.nvim
 set cmdheight=2
 
