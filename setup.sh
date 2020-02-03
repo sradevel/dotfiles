@@ -17,8 +17,14 @@ then
     mkdir ~/.vim/files/swap
     mkdir ~/.vim/files/undo
 
+    ln -s $DIR/.vimfiles/coc-settings.json ~/.vim/coc-settings.json
+
     # Vundle installieren
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
+
+    # checkout the release branch of coc.nvim
+    cd ~/.vim/bundle/coc.nvim
+    git checkout release
 fi
 
