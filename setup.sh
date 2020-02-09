@@ -9,7 +9,7 @@ ln -s $DIR/.vimfiles ~/.vimfiles
 ln -s $DIR/.tmux.conf ~/.tmux.conf
 
 # .vim dir anlegen
-if [ ! -d "~/.vim/" ]
+if [ ! -d "~/.vim/" ];
 then
     mkdir ~/.vim
     mkdir ~/.vim/bundle
