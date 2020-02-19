@@ -67,6 +67,7 @@ ZSH_THEME="avit"
 plugins=(
   git
   brew
+  osx
 )
 
 source $ZSH/oh-my-zsh.sh
