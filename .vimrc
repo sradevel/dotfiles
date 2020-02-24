@@ -11,7 +11,8 @@ set t_Co=256 "force 256 colors
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-    Plugin 'neoclide/coc.nvim'
+"    Plugin 'neoclide/coc.nvim'
+    Plugin 'ycm-core/YouCompleteMe'
     Plugin 'tmsvg/pear-tree'
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
@@ -99,5 +100,11 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=no
-
-source ~/.vimfiles/coc.vim
+let g:ycm_language_server =
+  \ [{
+  \   'name': 'ccls',
+  \   'cmdline': [ 'ccls' ],
+  \   'filetypes': [ 'c', 'cpp', 'cuda', 'objc', 'objcpp' ],
+  \   'project_root_files': [ '.ccls-root', 'compile_commands.json' ]
+  \ }]
+"source ~/.vimfiles/coc.vim
