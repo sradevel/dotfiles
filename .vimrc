@@ -35,6 +35,7 @@ filetype plugin indent on
 
 let g:pear_tree_repeatable_expand =0 "dont need the dot command"
 
+set background=dark
 set clipboard=unnamed      " use system clipboard
 set autoindent             " Indent according to previous line.
 set expandtab              " Use spaces instead of tabs.
