@@ -19,6 +19,7 @@ then
     mkdir ~/.vim/files/undo
 
     ln -s $DIR/.vimfiles/coc-settings.json ~/.vim/coc-settings.json
+    ln -s $DIR/.vimfiles/.ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 
     # Vundle installieren
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

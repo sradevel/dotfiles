@@ -109,4 +109,6 @@ let g:ycm_language_server =
   \   'project_root_files': [ '.ccls-root', 'compile_commands.json' ]
   \ }]
 let g:bufferline_echo = 0
+
+let g:ycm_global_ycm_extra_conf = '$HOME/.vim/.ycm_extra_conf.py'
 "source ~/.vimfiles/coc.vim
