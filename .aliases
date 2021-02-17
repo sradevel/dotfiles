@@ -1,0 +1,6 @@
+alias ls="gls -FlhaN --group-directories-first --color=auto"
+
+alias vi=/opt/homebrew/bin/nvim
+alias vim=/opt/homebrew/bin/nvim
+
+alias python3=/opt/homebrew/bin/python3
