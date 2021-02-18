@@ -2,7 +2,21 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/sraabe/.oh-my-zsh"
+case `uname` in
+        Darwin)
+          export ZSH="/Users/sraabe/.oh-my-zsh"
+          # set C Compiler
+          export CC=/opt/homebrew/opt/llvm/bin/clang
+          export CXX=/opt/homebrew/opt/llvm/bin/clang++
+
+          #set Compiler Flags
+          export LDFLAGS="-L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib"
+          export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+	;;
+        Linux)
+	  export ZSH="/home/sraabe/.oh-my-zsh"
+	;;
+esac
 
 ZSH_THEME="robbyrussell"
 
@@ -18,13 +32,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# set C Compiler
-export CC=/opt/homebrew/opt/llvm/bin/clang
-export CXX=/opt/homebrew/opt/llvm/bin/clang++
-
-#set Compiler Flags
-export LDFLAGS="-L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
 # my aliases
 source ~/.aliases
